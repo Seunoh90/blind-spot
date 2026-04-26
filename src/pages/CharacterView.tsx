@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { characters } from '../data';
-import { ArrowLeft, Lock, Unlock, Zap, Heart, Shield, Activity, Fingerprint, AlertTriangle, Quote } from 'lucide-react';
+import { ArrowLeft, Lock, Unlock, Zap, Heart, Shield, Activity, Fingerprint, AlertTriangle, Quote, X } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export function CharacterView() {
   const { id } = useParams();
   const character = characters.find(c => c.id === id);
   const [isSecretUnlocked, setIsSecretUnlocked] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -179,20 +180,53 @@ export function CharacterView() {
         <h3 className="text-2xl font-bold text-white mb-8 w-full text-center">GALLERY</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {character.gallery.map((imgSrc, i) => (
-            <motion.div
+            <motion.button
               key={i}
+              onClick={() => setSelectedImage(imgSrc)}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="aspect-square rounded-xl overflow-hidden bg-zinc-900 relative group border border-white/5"
+              className="aspect-square rounded-xl overflow-hidden bg-zinc-900 relative group border border-white/5 cursor-zoom-in"
             >
                <img src={imgSrc} alt={`${character.name} archive ${i + 1}`} referrerPolicy="no-referrer" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity group-hover:scale-110 duration-700" />
                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 group-hover:ring-purple-500/50 transition-colors rounded-xl z-20 pointer-events-none" />
-            </motion.div>
+            </motion.button>
           ))}
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 cursor-zoom-out"
+          >
+            <motion.button 
+              className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+              onClick={() => setSelectedImage(null)}
+            >
+              <X className="w-6 h-6" />
+            </motion.button>
+            <motion.img
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              src={selectedImage}
+              alt="Enlarged gallery view"
+              referrerPolicy="no-referrer"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
+
