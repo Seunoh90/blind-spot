@@ -21,6 +21,7 @@ export interface Character {
   thumbnail: string;
   gallery: string[];
   logo: string;
+  quote: string;
 }
 
 export const characters: Character[] = [
@@ -46,6 +47,7 @@ export const characters: Character[] = [
     ],
     placeholderColor: 'from-purple-900 to-black',
     thumbnail: 'https://5ooo.uk/crack/page/some%20(3).webp',
+    quote: '내 반경 안으로 들어오지 마. 서로에게 좋을 거 없어.',
     gallery: [
       'https://5ooo.uk/crack/page/back%20(1).webp',
       'https://5ooo.uk/crack/page/back%20(2).webp',
@@ -75,6 +77,7 @@ export const characters: Character[] = [
     nsfw: '[대디 돔 / 파워 플레이어 / 디그레이더] 침대 위에서도 협상하듯 상황을 주도하며, 상대가 무너지는 과정을 감상하는 것을 즐깁니다. 칭찬과 모욕을 교차해서 사용하는 데 능숙합니다.',
     placeholderColor: 'from-yellow-900 to-black',
     thumbnail: 'https://5ooo.uk/crack/page/some%20(6).webp',
+    quote: '꼬마야, 세상은 돈과 힘으로 돌아가는 거란다. 마침 나한테는 둘 다 있고.',
     gallery: [
       'https://5ooo.uk/crack/page/cha%20(1).webp',
       'https://5ooo.uk/crack/page/cha%20(2).webp',
@@ -108,6 +111,7 @@ export const characters: Character[] = [
     ],
     placeholderColor: 'from-blue-900 to-black',
     thumbnail: 'https://5ooo.uk/crack/page/some%20(4).webp',
+    quote: '너는 지금 거짓말을 하고 있구나. 괜찮아. 나는 진실을 보는 쪽이라서.',
     gallery: [
       'https://5ooo.uk/crack/page/seo%20(1).webp',
       'https://5ooo.uk/crack/page/seo%20(2).webp',
@@ -131,11 +135,11 @@ export const characters: Character[] = [
     likes: '수영',
     dislikes: '거짓말',
     pastDream: '사관학교 생도 (군인)',
-    personality: '강강약약, 곧은 신념',
     description: '불과 얼음이라는 상반된 속성을 동시에 다루는 강자. 차분하고 어른스러우며, 신념이 매우 곧습니다. 강자에게는 강하게, 약자에게는 부드럽게 대하는 정석적인 성품을 지녔습니다.',
     nsfw: '[젠틀 돔 / 템퍼러처 플레이어 / 프로텍터] 존댓말을 유지하면서도 상대를 완벽하게 제압하는 갭이 특징입니다. 상대가 강하게 반항할수록 본인도 거칠어지는 리액티브 성향이 있으며, 한 번 빠지면 집착의 순도가 매우 높아 상대를 소유하고 마킹하려는 경향이 있습니다.',
     placeholderColor: 'from-red-900 to-black',
     thumbnail: 'https://5ooo.uk/crack/page/some%20(5).webp',
+    quote: '그대의 신념이 무엇이든, 무고한 이들을 위협한다면 제가 막아서겠습니다.',
     gallery: [
       'https://5ooo.uk/crack/page/yu%20(1).webp',
       'https://5ooo.uk/crack/page/yu%20(2).webp',
@@ -160,10 +164,11 @@ export const characters: Character[] = [
     dislikes: '혼밥',
     pastDream: '수의사',
     feature: '압도적인 물리 파워, 예민한 후각',
-    description: '평소에는 씩씩하고 활발한 "대형견" 같은 청년이지만, 몬스터 진압 시에는 늑대의 형상과 본능이 발현됩니다. 꼬인 구석이 없고, 힘든 일도 마음에 담아두지 않는 단순하고 긍정적인 성격입니다.',
+    description: '평소에는 씩씩하고 활발한 대형견 같은 사람이지만, 몬스터 진압 시에는 늑대의 형상과 본능이 발현됩니다. 꼬인 구석이 없고, 힘든 일도 마음에 담아두지 않는 단순하고 긍정적인 성격입니다.',
     nsfw: '[브랫 → 프라이멀 프레이 / 스위치] 평상시에는 순종적이고 귀엽게 굴지만, 늑대의 본능이 폭주하는 순간 주도권이 완전히 뒤집힙니다. 물기, 목덜미 고정 등 동물적 본능이 지배하며 본인조차 스스로를 제어하지 못하는 야성적인 스위치 성향입니다.',
     placeholderColor: 'from-orange-900 to-black',
     thumbnail: 'https://5ooo.uk/crack/page/some%20(1).webp',
+    quote: '누나! 오늘 훈련도 제가 도와드릴게요! 뭐든지 시켜만 주세요!',
     gallery: [
       'https://5ooo.uk/crack/page/han%20(1).webp',
       'https://5ooo.uk/crack/page/han%20(2).webp',
@@ -191,6 +196,7 @@ export const characters: Character[] = [
     nsfw: '[브랫 / 토핑 프롬 더 바텀 / 분노형 서브] 절대 순순히 굴복하지 않고 끝까지 반항하다가 결국 밀리는 타입입니다. 억눌린 강제 여장 스트레스 탓에 침대에서만큼은 주도권을 쥐려고 발악하며, 상황에 맞춘 이중적인 롤플레잉에 능숙합니다.',
     placeholderColor: 'from-pink-900 to-black',
     thumbnail: 'https://5ooo.uk/crack/page/some%20(2).webp',
+    quote: '아, 씨발! 야, 너 지금 나 여자 취급했냐? 눈깔 제대로 안 떠?!',
     gallery: [
       'https://5ooo.uk/crack/page/do%20(1).webp',
       'https://5ooo.uk/crack/page/do%20(2).webp',

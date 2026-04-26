@@ -1,14 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { characters } from '../data';
-import { ArrowLeft, Lock, Unlock, Zap, Heart, Shield, Activity, Fingerprint, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, Lock, Unlock, Zap, Heart, Shield, Activity, Fingerprint, AlertTriangle, Quote } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export function CharacterView() {
   const { id } = useParams();
   const character = characters.find(c => c.id === id);
   const [isSecretUnlocked, setIsSecretUnlocked] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!character) {
     return (
@@ -51,6 +55,14 @@ export function CharacterView() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {character.quote && (
+              <div className="mb-6 flex gap-3 text-white/90 items-start max-w-3xl">
+                <Quote className="w-6 h-6 md:w-8 md:h-8 text-purple-400 shrink-0 opacity-80 mt-1" />
+                <p className="text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white drop-shadow-md break-keep">
+                  {character.quote}
+                </p>
+              </div>
+            )}
             <div className="text-purple-400 text-sm tracking-[0.2em] mb-3">CLASSIFIED REF: {character.id.toUpperCase()}</div>
             <h1 className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tight">{character.name}</h1>
             <h2 className="text-xl md:text-2xl text-slate-400 font-bold uppercase tracking-widest">{character.nameEn}</h2>
