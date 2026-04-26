@@ -38,16 +38,16 @@ export const characters: Character[] = [
     dislikes: '방향제, 향수',
     pastDream: '화학 연구원',
     currentStatus: '불면증, 미각 상실(혀의 독성)',
-    description: '대한민국 헌터 랭킹 부동의 1위. 독을 다루는 능력의 스케일이 워낙 커 파티원에게 피해를 주기 때문에 철저한 솔로 플레이를 선호합니다. 평소 특수 방독면과 가죽 장갑을 착용하고 다닙니다. 까칠하고 시니컬하지만 맡은 바 책임감은 뚜렷합니다.',
+    description: '대한민국 헌터 랭킹 부동의 1위. 독을 다루는 능력의 스케일이 워낙 커 파티원에게 피해를 주기 때문에 철저한 솔로 플레이를 선호합니다. 평소 특수 방독면과 가죽 장갑을 착용하고 다닙니다. 까칠하고 시니컬하지만 맡은 바 책임감은 뚜렷하며, 유치하고 애정결핍이 있는 내면을 숨기고 있습니다.',
     nsfw: '[사디스트 / 센서리 디프라이버 / 프라이멀 헌터] 스킨십의 허들이 매우 높지만, 통제된 환경 속에서 상대의 감각을 압도하는 것에 집착합니다. 허들을 넘은 상대에게는 거칠고 소유욕이 강합니다.',
     secretTitle: '트라우마',
     secretData: [
-      '친누나를 희귀병으로 잃고 신약 개발을 하는 화학 연구원을 꿈꿨습니다.',
+      '유일한 혈육이던 친누나를 희귀병으로 잃고 신약 개발을 하는 화학 연구원을 꿈꿨습니다.',
       '생명을 살리고 싶었던 과거와 달리, 현재 맹독을 다루는 자신의 능력에 깊은 자기혐오를 품고 있습니다.'
     ],
     placeholderColor: 'from-purple-900 to-black',
     thumbnail: 'https://5ooo.uk/crack/page/some%20(3).webp',
-    quote: '내 반경 안으로 들어오지 마. 서로에게 좋을 거 없어.',
+    quote: '내 번호 비싸요. 하여간 예쁜건 알아가지고.',
     gallery: [
       'https://5ooo.uk/crack/page/back%20(1).webp',
       'https://5ooo.uk/crack/page/back%20(2).webp',
@@ -139,7 +139,7 @@ export const characters: Character[] = [
     nsfw: '[젠틀 돔 / 템퍼러처 플레이어 / 프로텍터] 존댓말을 유지하면서도 상대를 완벽하게 제압하는 갭이 특징입니다. 상대가 강하게 반항할수록 본인도 거칠어지는 리액티브 성향이 있으며, 한 번 빠지면 집착의 순도가 매우 높아 상대를 소유하고 마킹하려는 경향이 있습니다.',
     placeholderColor: 'from-red-900 to-black',
     thumbnail: 'https://5ooo.uk/crack/page/some%20(5).webp',
-    quote: '그대의 신념이 무엇이든, 무고한 이들을 위협한다면 제가 막아서겠습니다.',
+    quote: '그래도 후회가 남는 것은 싫습니다.',
     gallery: [
       'https://5ooo.uk/crack/page/yu%20(1).webp',
       'https://5ooo.uk/crack/page/yu%20(2).webp',
@@ -168,7 +168,7 @@ export const characters: Character[] = [
     nsfw: '[브랫 → 프라이멀 프레이 / 스위치] 평상시에는 순종적이고 귀엽게 굴지만, 늑대의 본능이 폭주하는 순간 주도권이 완전히 뒤집힙니다. 물기, 목덜미 고정 등 동물적 본능이 지배하며 본인조차 스스로를 제어하지 못하는 야성적인 스위치 성향입니다.',
     placeholderColor: 'from-orange-900 to-black',
     thumbnail: 'https://5ooo.uk/crack/page/some%20(1).webp',
-    quote: '누나! 오늘 훈련도 제가 도와드릴게요! 뭐든지 시켜만 주세요!',
+    quote: '같이 밥 먹어주면 안돼요? 응? 한번만?',
     gallery: [
       'https://5ooo.uk/crack/page/han%20(1).webp',
       'https://5ooo.uk/crack/page/han%20(2).webp',
