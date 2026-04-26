@@ -42,11 +42,6 @@ export function CharacterView() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent" />
         
-        {/* Affiliation Logo Watermark */}
-         <div className="absolute right-[-10%] top-[-10%] opacity-10 pointer-events-none">
-           <img src={character.logo} alt="Logo" referrerPolicy="no-referrer" className="w-[800px] h-auto object-contain blur-[2px]" />
-         </div>
-
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-12">
           <Link to="/" className="inline-flex items-center gap-2 text-slate-400 hover:text-white mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> 뒤로 가기
